@@ -2,23 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-10T19:45:40 IST" name="Default suite" finished-at="2024-11-10T19:45:51 IST" duration-ms="11454">
+  <suite started-at="2024-11-10T20:57:25 IST" name="Default suite" finished-at="2024-11-10T20:57:40 IST" duration-ms="15499">
     <groups>
-      <group name="signup">
-        <method signature="UserLogin.tc05_registerExitingUser()[pri:0, instance:testcases.UserLogin@409bf450]" name="tc05_registerExitingUser" class="testcases.UserLogin"/>
-      </group> <!-- signup -->
     </groups>
-    <test started-at="2024-11-10T19:45:40 IST" name="Default test" finished-at="2024-11-10T19:45:51 IST" duration-ms="11454">
-      <class name="testcases.UserLogin">
-        <test-method is-config="true" signature="openDriver()[pri:0, instance:testcases.UserLogin@409bf450]" started-at="2024-11-10T19:45:40 IST" name="openDriver" finished-at="2024-11-10T19:45:49 IST" duration-ms="8977" status="PASS">
+    <test started-at="2024-11-10T20:57:25 IST" name="Default test" finished-at="2024-11-10T20:57:40 IST" duration-ms="15499">
+      <class name="testcases.VerifyPages">
+        <test-method is-config="true" signature="openDriver()[pri:0, instance:testcases.VerifyPages@293a5bf6]" started-at="2024-11-10T20:57:25 IST" name="openDriver" finished-at="2024-11-10T20:57:35 IST" duration-ms="9602" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openDriver -->
-        <test-method signature="tc05_registerExitingUser()[pri:0, instance:testcases.UserLogin@409bf450]" started-at="2024-11-10T19:45:49 IST" name="tc05_registerExitingUser" finished-at="2024-11-10T19:45:51 IST" duration-ms="2414" status="PASS">
+        <test-method signature="tc06_contractForm()[pri:0, instance:testcases.VerifyPages@293a5bf6]" started-at="2024-11-10T20:57:35 IST" name="tc06_contractForm" finished-at="2024-11-10T20:57:40 IST" duration-ms="5840" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tc05_registerExitingUser -->
-      </class> <!-- testcases.UserLogin -->
+        </test-method> <!-- tc06_contractForm -->
+      </class> <!-- testcases.VerifyPages -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

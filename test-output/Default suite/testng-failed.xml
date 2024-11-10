@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.UserLogin">
+      <class name="testcases.VerifyPages">
         <methods>
           <include name="openDriver"/>
-          <include name="tc05_registerExitingUser"/>
+          <include name="tc06_contractForm"/>
         </methods>
-      </class> <!-- testcases.UserLogin -->
+      </class> <!-- testcases.VerifyPages -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

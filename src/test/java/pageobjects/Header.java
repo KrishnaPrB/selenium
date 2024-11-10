@@ -30,6 +30,9 @@ public class Header {
 	@FindBy(xpath = "//header//a[text()=' Logout']")
 	public WebElement logOutBtn;
 
+	@FindBy(xpath = "//header//a[text()=' Contact us']")
+	public WebElement contactBtn;
+
 	// *************************************************************************************************
 
 	public Header(WebDriver driver) {
