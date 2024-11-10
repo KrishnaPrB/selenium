@@ -28,18 +28,20 @@ public class SignUpLogin {
 	public WebElement loginHeaderText;
 
 	// Signup
+	@FindBy(className = "signup-form")
+	public WebElement signInForm;
 
 	@FindBy(xpath = "//div[@class='signup-form']//input[@type='email']")
 	public WebElement signInEmailInput;
 
-	@FindBy(xpath = "//div[@class='signup-form']//input[name='name']")
+	@FindBy(xpath = "//div[@class='signup-form']//input[@name='name']")
 	private WebElement signInNameInput;
 
 	@FindBy(xpath = "//div[@class='signup-form']//button[@type='submit']")
 	private WebElement submitBtn;
 
 	@FindBy(xpath = "//div[@class='signup-form']//h2")
-	public WebElement singInHeaderText;
+	public WebElement signInHeaderText;
 
 	// ***************************************************************************************************************
 
@@ -53,6 +55,12 @@ public class SignUpLogin {
 		loginEmailInput.sendKeys(userEmail);
 		loginPasswordInput.sendKeys(userPassword);
 		loginBtn.click();
+	}
+
+	public void enterSignInForm(String userName, String userEmail) {
+		signInNameInput.sendKeys(userName);
+		signInEmailInput.sendKeys(userEmail);
+		submitBtn.click();
 	}
 
 }

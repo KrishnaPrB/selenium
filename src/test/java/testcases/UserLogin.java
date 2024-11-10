@@ -16,7 +16,7 @@ import pageobjects.SignUpLogin;
 public class UserLogin extends Drivers {
 
 	@Test(groups = { "login" })
-	public void incorrectEmailPassword() throws IOException {
+	public void tc03_incorrectEmailPassword() throws IOException {
 		// declare objects
 
 		Header header = new Header(driver);
@@ -50,7 +50,7 @@ public class UserLogin extends Drivers {
 	}
 
 	@Test(groups = { "login" })
-	public void logOut() throws IOException {
+	public void tc04_logOut() throws IOException {
 		// declare objects
 
 		Header header = new Header(driver);
@@ -86,6 +86,34 @@ public class UserLogin extends Drivers {
 
 	}
 
+	@Test(groups = { "signup" })
+	public void tc05_registerExitingUser() throws IOException {
+		// declare objects
+
+		Header header = new Header(driver);
+		SignUpLogin loginPage = new SignUpLogin(driver);
+
+		// Verify that home page is visible successfully
+		homePageVisibility(header);
+
+		// Click on 'Signup / Login' button
+		header.loginBtn.click();
+
+		// Verify 'New User Signup!' is visible
+		signInFormVisibility(loginPage);
+
+		// Enter name and already registered email address
+		String userEmailString = PropertyValue.getProperty("userID");
+		String userNameString = PropertyValue.getProperty("password");
+		loginPage.enterSignInForm(userNameString, userEmailString);
+
+		// Verify error 'Email Address already exist!' is visible
+		wait.until(ExpectedConditions.visibilityOf(loginPage.signInHeaderText));
+		String signIntext = loginPage.signInForm.findElement(By.xpath("//p")).getText();
+		Assert.assertEquals(signIntext, "Email Address already exist!");
+
+	}
+
 	public void homePageVisibility(Header header) {
 		String homeColorString = header.homeBtn.getAttribute("style");
 		String getTitleString = driver.getTitle();
@@ -98,6 +126,11 @@ public class UserLogin extends Drivers {
 		String loginHeaderTextString = loginPage.loginHeaderText.getText();
 		Assert.assertEquals(loginHeaderTextString, "Login to your account");
 
+	}
+
+	public void signInFormVisibility(SignUpLogin signInPage) {
+		String signInHeaderString = signInPage.signInHeaderText.getText();
+		Assert.assertEquals(signInHeaderString, "New User Signup!");
 	}
 
 }

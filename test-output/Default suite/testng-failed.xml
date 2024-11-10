@@ -6,7 +6,7 @@
       <class name="testcases.UserLogin">
         <methods>
           <include name="openDriver"/>
-          <include name="incorrectEmailPassword"/>
+          <include name="tc05_registerExitingUser"/>
         </methods>
       </class> <!-- testcases.UserLogin -->
     </classes>
